@@ -52,9 +52,16 @@ describe("Thermostat", function () {
       }
       expect(thermostat.getCurrentTemperature()).toEqual(25);
     });
+  });
 
-    test
-    
+  describe("when power saving mode is off", function() {
+    it("has a maximum temperature of 32 degrees", function() {
+      thermostat.switchPowerSavingModeOff();
+      for (var i = 0; i < 12; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(32);
+    });
   });
 
 
