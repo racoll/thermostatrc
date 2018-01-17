@@ -52,6 +52,10 @@ describe("Thermostat", function () {
       }
       expect(thermostat.getCurrentTemperature()).toEqual(25);
     });
+
+    test
+    
   });
+
 
 });
